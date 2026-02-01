@@ -26,7 +26,7 @@ const GameCanvas = ({ problemData }) => {
     <Stage width={width} height={height}>
       <Layer>
         {/* Sombra proyectada (Nivel 4 - Árbol) */}
-        {problemData.h === "Tree" && (
+        {problemData.h === "h" && (
           <Line
             points={[x1, y1, x2, y2]}
             stroke="#d3d3d3"
@@ -39,9 +39,9 @@ const GameCanvas = ({ problemData }) => {
         <Line
           points={[x0, y0, x1, y1, x2, y2]}
           closed={true}
-          stroke={problemData.h === "Tree" ? "#2e7d32" : "#4285F4"}
+          stroke={problemData.h === "h" ? "#2e7d32" : "#4285F4"}
           strokeWidth={4}
-          fill={problemData.h === "Tree" ? "#f1f8e9" : "#e8f0fe"}
+          fill={problemData.h === "h" ? "#f1f8e9" : "#e8f0fe"}
           lineJoin="round"
         />
 
@@ -53,7 +53,7 @@ const GameCanvas = ({ problemData }) => {
         />
 
         {/* Representación del Árbol (Nivel 4) */}
-        {problemData.h === "Tree" && (
+        {problemData.h === "h" && (
           <Group x={x1} y={y0}>
             <Line points={[0, 0, 0, y1 - y0]} stroke="#5d4037" strokeWidth={10} />
             <Circle x={0} y={0} radius={35} fill="#4caf50" shadowBlur={10} />
@@ -105,7 +105,7 @@ const GameCanvas = ({ problemData }) => {
           <Text
             x={problemData.anglePos === "top" ? x0 + 10 : x2 - 50}
             y={problemData.anglePos === "top" ? y0 + 40 : y2 - 40}
-            text="θ"
+            text="30°"
             fontSize={24}
             fill="#ff5722"
             fontStyle="bold"
