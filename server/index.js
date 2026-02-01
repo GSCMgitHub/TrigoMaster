@@ -17,7 +17,7 @@ app.use(express.json());
 // Generador de ejercicios según nivel
 const generateProblem = (level) => {
     // Generador de ternas pitagóricas simples (3-4-5, 6-8-10, 5-12-13)
-    const triplets = [[3, 4, 5], [6, 8, 10], [5, 12, 13], [8, 15, 17]];
+    const triplets = [["A", "B", "C"], [6, 8, 10], [5, 12, 13], [8, 15, 17]];
     const [a, b, h] = triplets[Math.floor(Math.random() * triplets.length)];
 
     switch (parseInt(level)) {
