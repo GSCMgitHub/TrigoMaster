@@ -82,7 +82,7 @@ const App = () => {
       </main>
 
       <footer style={{ marginTop: '20px', fontSize: '0.8rem', color: '#888' }}>
-        "Papeando matemáticas"
+        "Aprende razones trigonométricas con Google Cloud."
       </footer>
     </div>
   );
