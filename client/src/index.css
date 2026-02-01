@@ -1,0 +1,126 @@
+/* Paleta de colores inspirada en Material Design y Juegos Educativos */
+:root {
+  --primary: #6200ee;
+  --secondary: #03dac6;
+  --background: #f0f2f5;
+  --surface: #ffffff;
+  --error: #b00020;
+  --success: #4caf50;
+  --text: #1a1a1b;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  max-width: 800px;
+}
+
+.game-container {
+  background: var(--surface);
+  margin: 20px;
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+h1 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.score-badge {
+  display: inline-block;
+  background: var(--secondary);
+  color: #000;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Contenedor del Canvas de Konva */
+.canvas-wrapper {
+  background: #f8f9fa;
+  border: 3px solid #dee2e6;
+  border-radius: 15px;
+  display: inline-block;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+/* Botones de Opciones */
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.option-btn {
+  background-color: var(--surface);
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.option-btn:hover {
+  background-color: var(--primary);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(98, 0, 238, 0.3);
+}
+
+.option-btn:active {
+  transform: translateY(0);
+}
+
+/* Feedback de acierto/error */
+.feedback-msg {
+  margin-top: 25px;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.feedback-success {
+  background-color: #e8f5e9;
+  color: var(--success);
+}
+
+.feedback-error {
+  background-color: #ffebee;
+  color: var(--error);
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Pantalla de carga */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: var(--primary);
+}
