@@ -17,7 +17,7 @@ app.use(express.json());
 // Generador de ejercicios según nivel
 const generateProblem = (level) => {
     // Generador de ternas pitagóricas simples (3-4-5, 6-8-10, 5-12-13)
-    const triplets = [["A", "B", "C"], [6, 8, 10], [5, 12, 13], [8, 15, 17]];
+    const triplets = [[3, 4, 5], [6, 8, 10], [5, 12, 13], [8, 15, 17]];
     const [a, b, h] = triplets[Math.floor(Math.random() * triplets.length)];
 
     switch (parseInt(level)) {
@@ -26,7 +26,7 @@ const generateProblem = (level) => {
                 level: 1,
                 type: "identify",
                 question: "Identifica el Cateto Opuesto respecto al ángulo marcado.",
-                data: { a, b, h, anglePos: "top" },
+                data: { a: "A", b: "B", h: "H", anglePos: "top" },
                 options: ["Lado A", "Lado B", "Hipotenusa"],
                 correct: "Lado B"
             };
@@ -34,7 +34,7 @@ const generateProblem = (level) => {
             return {
                 level: 2,
                 type: "calculate",
-                question: `¿Cuál es el valor del Seno(θ)? (Seno = Opuesto / Hipotenusa)`,
+                question: `¿Cuál es el valor de sin(θ)? (Seno = Opuesto / Hipotenusa)`,
                 data: { a, b, h, anglePos: "top" },
                 options: [(b/h).toFixed(2), (a/h).toFixed(2), (b/a).toFixed(2)],
                 correct: (b/h).toFixed(2)
