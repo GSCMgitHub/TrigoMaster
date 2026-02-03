@@ -105,7 +105,7 @@ const GameCanvas = ({ problemData }) => {
           <Text
             x={problemData.anglePos === "top" ? x0 + 10 : x2 - 50}
             y={problemData.anglePos === "top" ? y0 + 40 : y2 - 40}
-            text="30°"
+            text="θ"
             fontSize={24}
             fill="#ff5722"
             fontStyle="bold"
