@@ -66,7 +66,7 @@ const GameCanvas = ({ problemData }) => {
           <Arc
             x={x0} y={y0}
             innerRadius={30} outerRadius={35}
-            angle={350} rotation={90}
+            angle={350} rotation={45}
             fill="#ff5722"
           />
         )}
