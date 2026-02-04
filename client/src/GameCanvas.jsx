@@ -66,11 +66,7 @@ const GameCanvas = ({ problemData }) => {
           <Arc
             x={x0} y={y0}
             innerRadius={30} outerRadius={35}
-<<<<<<< Updated upstream
-            angle={90} rotation={0}
-=======
             angle={30} rotation={0}
->>>>>>> Stashed changes
             fill="#ff5722"
           />
         )}
@@ -78,11 +74,7 @@ const GameCanvas = ({ problemData }) => {
           <Arc
             x={x2} y={y2}
             innerRadius={30} outerRadius={35}
-<<<<<<< Updated upstream
-            angle={90} rotation={180}
-=======
             angle={30} rotation={180}
->>>>>>> Stashed changes
             fill="#ff5722"
           />
         )}
