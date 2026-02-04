@@ -65,7 +65,7 @@ const GameCanvas = ({ problemData }) => {
         {problemData.anglePos === "top" && (
           <Arc
             x={x0} y={y0}
-            innerRadius={30} outerRadius={30}
+            innerRadius={30} outerRadius={33}
             angle={90} rotation={0}
             fill="#ff5722"
           />
@@ -73,7 +73,7 @@ const GameCanvas = ({ problemData }) => {
         {problemData.anglePos === "bottom" && (
           <Arc
             x={x2} y={y2}
-            innerRadius={30} outerRadius={30}
+            innerRadius={30} outerRadius={33}
             angle={90} rotation={180}
             fill="#ff5722"
           />
